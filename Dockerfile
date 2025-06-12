@@ -36,9 +36,9 @@ RUN php artisan config:clear \
     && chmod -R 775 storage bootstrap/cache \
     && chown -R www-data:www-data /var/www
 
-# ✅ Change this to match Railway port
+# ✅ Set correct port for Railway
 ENV PORT=8080
 EXPOSE 8080
 
-# ✅ Force artisan to use 8080 (not auto $PORT)
+# ✅ Run Laravel on correct port
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
