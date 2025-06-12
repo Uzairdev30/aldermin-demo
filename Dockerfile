@@ -36,9 +36,9 @@ RUN php artisan config:clear \
     && chmod -R 775 storage bootstrap/cache \
     && chown -R www-data:www-data /var/www
 
-# Step 9: Railway ke port ko ENV se read karo
-ENV PORT 8000
-EXPOSE 8000
+# ✅ Change this to match Railway port
+ENV PORT=8080
+EXPOSE 8080
 
-# Step 10: Laravel app ko start karo with dynamic port
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT}"]
+# ✅ Force artisan to use 8080 (not auto $PORT)
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
