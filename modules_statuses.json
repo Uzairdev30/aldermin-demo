@@ -1,0 +1,18 @@
+{
+    "Applicants": true,
+    "Timetable": true,
+    "Setting": true,
+    "GenerateCertificate": true,
+    "IdCard": true,
+    "Gradebook": true,
+    "StudentAdmission": true,
+    "StudentCalendar": true,
+    "Examination": true,
+    "Attendance": true,
+    "NewsManagement": true,
+    "SmsIntegration": true,
+    "Finance": true,
+    "HumanResourse": true,
+    "UserManagement": true,
+    "CourseAndBatch": true
+}

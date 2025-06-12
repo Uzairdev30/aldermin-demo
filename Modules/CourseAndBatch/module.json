@@ -1,0 +1,11 @@
+{
+    "name": "CourseAndBatch",
+    "alias": "courseandbatch",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CourseAndBatch\\Providers\\CourseAndBatchServiceProvider"
+    ],
+    "files": []
+}

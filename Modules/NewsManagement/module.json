@@ -1,0 +1,11 @@
+{
+    "name": "NewsManagement",
+    "alias": "newsmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\NewsManagement\\Providers\\NewsManagementServiceProvider"
+    ],
+    "files": []
+}

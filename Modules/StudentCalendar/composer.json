@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/studentcalendar",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\StudentCalendar\\": "app/",
+            "Modules\\StudentCalendar\\Database\\Factories\\": "database/factories/",
+            "Modules\\StudentCalendar\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\StudentCalendar\\Tests\\": "tests/"
+        }
+    }
+}

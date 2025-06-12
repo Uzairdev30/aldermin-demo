@@ -1,0 +1,11 @@
+{
+    "name": "StudentCalendar",
+    "alias": "studentcalendar",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\StudentCalendar\\Providers\\StudentCalendarServiceProvider"
+    ],
+    "files": []
+}

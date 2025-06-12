@@ -1,0 +1,11 @@
+{
+    "name": "IdCard",
+    "alias": "idcard",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\IdCard\\Providers\\IdCardServiceProvider"
+    ],
+    "files": []
+}

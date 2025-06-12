@@ -1,0 +1,11 @@
+{
+    "name": "GenerateCertificate",
+    "alias": "generatecertificate",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\GenerateCertificate\\Providers\\GenerateCertificateServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,11 @@
+{
+    "name": "HumanResourse",
+    "alias": "humanresourse",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\HumanResourse\\Providers\\HumanResourseServiceProvider"
+    ],
+    "files": []
+}

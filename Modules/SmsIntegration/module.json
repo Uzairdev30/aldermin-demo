@@ -1,0 +1,11 @@
+{
+    "name": "SmsIntegration",
+    "alias": "smsintegration",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SmsIntegration\\Providers\\SmsIntegrationServiceProvider"
+    ],
+    "files": []
+}

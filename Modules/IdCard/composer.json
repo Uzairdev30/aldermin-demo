@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/idcard",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\IdCard\\": "app/",
+            "Modules\\IdCard\\Database\\Factories\\": "database/factories/",
+            "Modules\\IdCard\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\IdCard\\Tests\\": "tests/"
+        }
+    }
+}
