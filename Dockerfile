@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     npm \
-    libzip-dev
+    libzip-dev \
+    libcurl4-openssl-dev \
+    libssl-dev
 
 # Step 3: PHP extensions install karo
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
@@ -20,18 +22,23 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 # Step 4: Composer install karo
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Step 5: Apna code container mein daalo
+# Step 5: Working directory set karo
 WORKDIR /var/www
+
+# Step 6: Apna code copy karo
 COPY . .
 
-# Step 6: Laravel install setup
-RUN composer install
-RUN php artisan config:clear
+# Step 7: Laravel dependencies install karo
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
-# Step 7: Permissions theek karo
-RUN chown -R www-data:www-data /var/www
+# Step 8: Laravel config & permissions
+RUN php artisan config:clear \
+    && chmod -R 775 storage bootstrap/cache \
+    && chown -R www-data:www-data /var/www
 
+# Step 9: Railway ke port ko ENV se read karo
+ENV PORT 8000
 EXPOSE 8000
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
-
+# Step 10: Laravel app ko start karo with dynamic port
+CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT}"]
